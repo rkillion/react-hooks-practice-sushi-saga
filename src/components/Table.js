@@ -1,10 +1,15 @@
 import React from "react";
 
-function Table({ plates = [] }) {
+function Table({ sushi }) {
   // renders an empty plate for every element in the array
-  const emptyPlates = plates.map((_, index) => (
-    <div key={index} className="empty-plate" style={{ top: -7 * index }} />
-  ));
+  let emptyPlates = [];
+  let nextPlateIndex = 1;
+  if(sushi) {sushi.forEach(roll => {
+    if(roll.eaten) {
+    emptyPlates=[...emptyPlates,<div key={nextPlateIndex} className="empty-plate" style={{ top: -7 * nextPlateIndex }} />];
+    nextPlateIndex++;
+  }
+  });}
 
   return (
     <>

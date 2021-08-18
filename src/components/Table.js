@@ -1,6 +1,6 @@
 import React from "react";
 
-function Table({ sushi }) {
+function Table({ sushi, walletAmount }) {
   // renders an empty plate for every element in the array
   let emptyPlates = [];
   let nextPlateIndex = 1;
@@ -14,7 +14,7 @@ function Table({ sushi }) {
   return (
     <>
       <h1 className="remaining">
-        You have: ${/* Give me how much money I have left */} remaining!
+        You have: ${walletAmount} remaining!
       </h1>
       <div className="table">
         <div className="stack">{emptyPlates}</div>

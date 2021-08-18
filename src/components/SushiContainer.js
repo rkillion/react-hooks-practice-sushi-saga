@@ -9,7 +9,7 @@ function SushiContainer({ sushi, activeSushiIndex, setActiveSushiIndex, eatSushi
   return (
     <div className="belt">
       {displaySushi ? displaySushi.map(roll=> <Sushi key={roll.id} roll={roll} eatSushi={eatSushi} />) : <h1>Making Sushi...</h1> }
-      <MoreButton setActiveSushiIndex={setActiveSushiIndex} activeSushiIndex={activeSushiIndex}/>
+      <MoreButton setActiveSushiIndex={setActiveSushiIndex} activeSushiIndex={activeSushiIndex} sushi={sushi}/>
     </div>
   );
 }

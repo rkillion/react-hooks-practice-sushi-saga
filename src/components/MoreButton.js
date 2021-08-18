@@ -1,8 +1,9 @@
 import React from "react";
 
-function MoreButton({ setActiveSushiIndex, activeSushiIndex }) {
+function MoreButton({ setActiveSushiIndex, activeSushiIndex, sushi }) {
   return <button onClick={()=>{
-    setActiveSushiIndex(activeSushiIndex=>activeSushiIndex+4);
+    let newIndex = activeSushiIndex===sushi.length-4 ? 0 : activeSushiIndex+4;
+    setActiveSushiIndex(newIndex);
     console.log(activeSushiIndex);
   }}>More sushi!</button>;
 }

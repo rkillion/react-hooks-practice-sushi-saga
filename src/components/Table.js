@@ -1,6 +1,7 @@
 import React from "react";
+import AddWalletForm from "./AddWalletForm";
 
-function Table({ sushi, walletAmount }) {
+function Table({ sushi, walletAmount, setWalletAmount }) {
   // renders an empty plate for every element in the array
   let emptyPlates = [];
   let nextPlateIndex = 1;
@@ -15,6 +16,7 @@ function Table({ sushi, walletAmount }) {
     <>
       <h1 className="remaining">
         You have: ${walletAmount} remaining!
+        <AddWalletForm walletAmount={walletAmount} setWalletAmount= {setWalletAmount}/>
       </h1>
       <div className="table">
         <div className="stack">{emptyPlates}</div>

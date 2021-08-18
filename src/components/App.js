@@ -35,7 +35,7 @@ function App() {
         setActiveSushiIndex={setActiveSushiIndex}
         eatSushi={eatSushi}
         />
-      <Table sushi={sushi} walletAmount={walletAmount}/>
+      <Table sushi={sushi} walletAmount={walletAmount} setWalletAmount={setWalletAmount}/>
     </div>
   );
 }
